@@ -1,17 +1,17 @@
-#[apheder-html] Project
+#mervekostu-html Project
 ---
 
-PSD 2 HTML conversion for **Apheder HTML Web Site**.
+PSD 2 HTML conversion for **Merve Kostu HTML Web Site**.
 
-[Click here](http://demo.weblebix.com/apheder-html) to see the demo.
+[Click here](http://demo.weblebix.com/mervekostu-html) to see the demo.
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? [Open a new issue](https://gitlab.com/mavisland/apheder-html/issues/new) here on GitHub.
+Have a bug or a feature request? [Open a new issue](https://gitlab.com/mavisland/mervekostu-html/issues/new) here on GitHub.
 
 ## Copyright & License
 
-Copyright © 2017 Tanju Yıldız. Code released under the [MIT](https://gitlab.com/mavisland/apheder-html/blob/master/LICENSE.md) license.
+Copyright © 2018 Tanju Yıldız. Code released under the [MIT](https://gitlab.com/mavisland/mervekostu-html/blob/master/LICENSE.md) license.
 
 ## Hire me?
 
