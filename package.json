@@ -1,11 +1,11 @@
 {
-  "name": "apheder-html",
+  "name": "mervekostu-html",
   "version": "1.0.0",
-  "description": "Apheder HTML Website",
+  "description": "Merve Kostu HTML Website",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/mavisland/apheder-html.git"
+    "url": "git+ssh://git@gitlab.com/mavisland/mervekostu-html.git"
   },
   "keywords": [
     "psd2html",
@@ -17,9 +17,9 @@
   "author": "Tanju Yildiz <ben@tanjuyildiz.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/mavisland/apheder-html/issues"
+    "url": "https://gitlab.com/mavisland/mervekostu-html/issues"
   },
-  "homepage": "https://gitlab.com/mavisland/apheder-html#README",
+  "homepage": "https://gitlab.com/mavisland/mervekostu-html#README",
   "devDependencies": {
     "browser-sync": "^2.20.1",
     "del": "^3.0.0",
