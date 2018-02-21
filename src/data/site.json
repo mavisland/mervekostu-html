@@ -1,0 +1,10 @@
+{
+  "site": {
+    "lang": "tr",
+    "title": "Merve Koştu",
+    "description": "Merve Koştu Web Sitesi",
+    "keywords": "Merve Koştu, web site",
+    "icon": "assets/images/favicon.png",
+    "metaColor": "#3CB0E3"
+  }
+}
