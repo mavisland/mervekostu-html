@@ -1,0 +1,80 @@
+{% set bodyClass = "page-courses" %}
+<!-- index.njk -->
+{% extends "layouts/master.njk" %}
+
+{% block content %}
+	<div class="site-banner">
+		<div class="wrapper">
+			<ol class="breadcrumb">
+				<li><a href="#">anasayfa</a></li>
+				<li class="active">eğitimlerimiz</li>
+			</ol>
+		</div>
+	</div>
+	<div class="site-content">
+		<section class="section seminar-grid">
+			<div class="wrapper">
+				<div class="row seminar-title-row">
+					<div class="col-xs-12">
+						<h1><span>Eğitimlerimiz</span></h1>
+					</div>
+				</div>
+				<div class="row seminar-row">
+					<div class="col-xs-12 col-sm-3">
+						<a href="#" class="seminar-card">
+							<span class="seminar-header">
+								<span class="seminar-title">nlp practitioner</span>
+							</span>
+							<span class="seminar-body">
+								<img class="seminar-icon" src="assets/images/seminerler/nlp_egitim.png" alt="nlp practitioner">
+							</span>
+							<span class="seminar-footer">
+								<span class="seminar-duration">süre: 2 gün</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<a href="#" class="seminar-card">
+							<span class="seminar-header">
+								<span class="seminar-title">yaşam koçluğu</span>
+							</span>
+							<span class="seminar-body">
+								<img class="seminar-icon" src="assets/images/seminerler/yasam_koclugu.png" alt="yaşam koçluğu">
+							</span>
+							<span class="seminar-footer">
+								<span class="seminar-duration">süre: 2 gün</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<a href="#" class="seminar-card">
+							<span class="seminar-header">
+								<span class="seminar-title">öğrenci koçluğu</span>
+							</span>
+							<span class="seminar-body">
+								<img class="seminar-icon" src="assets/images/seminerler/ogrenci_koclugu.png" alt="öğrenci koçluğu">
+							</span>
+							<span class="seminar-footer">
+								<span class="seminar-duration">süre: 2 gün</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<a href="#" class="seminar-card">
+							<span class="seminar-header">
+								<span class="seminar-title">ilişki koçluğu</span>
+							</span>
+							<span class="seminar-body">
+								<img src="assets/images/seminerler/iliski_koclugu.png" alt="ilişki koçluğu">
+							</span>
+							<span class="seminar-footer">
+								<span class="seminar-duration">süre: 2 gün</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+{% endblock %}
