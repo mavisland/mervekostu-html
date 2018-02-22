@@ -2,4 +2,82 @@
 // Footer
 // --------------------------------------------------
 
-.site-footer {}
+.site-footer {
+	.padding-tb(30px);
+
+	@media (min-width: @screen-lg) {
+		.padding-tb(50px);
+	}
+}
+
+// Copyright
+.copyright {
+	color: #909090;
+	font-weight: bold;
+	.text-center();
+
+	> span {
+		display: block;
+	}
+	> a {
+		color: #8f8f8f;
+		color: rgba(144, 144, 144, .7);
+		display: block;
+
+		&:hover,
+		&:focus {
+			color: @link-color;
+		}
+	}
+	@media (min-width: @screen-sm) {
+		font-size: 20px;
+		line-height: 1;
+		.text-right();
+	}
+}
+
+// Social Links
+.social-links {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+	.text-center();
+
+	> li {
+		display: inline-block;
+		.padding-lr(5px);
+
+		> a {
+			color: #909090;
+			display: block;
+			font-weight: bold;
+
+			&:before {
+				content: "+";
+				display: none;
+			}
+
+			&:hover,
+			&:focus {
+				color: @link-color;
+			}
+		}
+	}
+	@media (min-width: @screen-sm) {
+		.text-right();
+
+		> li {
+			.padding-lr();
+
+			> a {
+				font-size: 30px;
+				line-height: (48 / 30);
+
+				&:before {
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
