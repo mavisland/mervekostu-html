@@ -1,0 +1,127 @@
+{% set bodyClass = "page-contact" %}
+<!-- index.njk -->
+{% extends "layouts/master.njk" %}
+
+{% block content %}
+	<div class="site-banner">
+		<div class="wrapper">
+			<ol class="breadcrumb">
+				<li><a href="#">anasayfa</a></li>
+				<li><a href="#">diger</a></li>
+				<li class="active">iletişim</li>
+			</ol>
+		</div>
+	</div>
+	<div class="site-content">
+		<section class="section seminar-grid">
+			<div class="wrapper">
+				<div class="row seminar-title-row">
+					<div class="col-xs-12">
+						<h1><span>iletişim</span></h1>
+					</div>
+				</div>
+				<div class="row seminar-row">
+					<div class="col-xs-12 col-sm-8 contact-form">
+						<div class="row">
+							<div class="col-xs-12">
+								<h2 class="form-title">merhaba merve koştu,</h2>
+							</div>
+						</div>
+						<form action="#">
+							<div class="row">
+								<div class="col-xs-12 col-sm-4">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="adım ve soyadım">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="mail adresim">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="telefon numaram: 0 (___) ___-__-__">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-4">
+									<div class="form-group">
+										<select class="form-control">
+											<option selected="">katılmak istediğim</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<div class="form-group">
+										<select class="form-control">
+											<option selected="">eğitim / seminer</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<div class="form-group">
+										<select class="form-control">
+											<option selected="">kariyer koçluğu</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<textarea cols="30" rows="10" class="form-control" placeholder="düşündüğüm ve söylemek istediklerim..."></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-9">
+									<div class="form-group">
+										<p class="help-block">en kısa sürede sizlerden geri dönüş içim haber bekliyor olacağım.</p>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-3">
+									<div class="form-group text-right">
+										<button class="btn btn-submit" type="submit">gönder <i class="fa fa-angle-double-right"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="contact-info">
+							<ul>
+								<li>
+									<a href="#">
+										<i class="fa fa-paper-plane-o"></i>
+										<span>merhaba@mervekostu.com.tr</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-phone"></i>
+										<span>0544 207 17 08</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-map-marker"></i>
+										<span>Kahve içerken konuşalım.</span>
+										<span>tepecik mh. hürriyet cd. c blok doğu no: z78 d:57</span>
+									</a>
+								</li>
+								<li>
+									<span class="text-center">
+										<img src="assets/images/kahve_icelim.png" alt="">
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+{% endblock %}
