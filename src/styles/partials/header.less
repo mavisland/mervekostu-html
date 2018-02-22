@@ -10,6 +10,10 @@
 	transition: all .3s ease-in-out;
 	z-index: @zindex-navbar-fixed;
 
+	body:not(.page-home) & {
+		background-color: #fff;
+	}
+
 	// Navbar Brand
 	.navbar-brand {
 		color: @navbar-default-brand-color;
@@ -122,14 +126,24 @@
 		}
 	}
 	@media (min-width: @screen-sm) {
-		.wrapper {
-			align-items: center;
-			display: flex;
-			justify-content: space-between;
-		}
+		.wrapper,
 		.navbar-header,
 		.navbar-collapse {
-			flex: 1;
+			align-items: center;
+			display: flex;
+		}
+		.wrapper {
+			width: 100%;
+		}
+		.navbar-header {
+			flex-shrink: 0;
+		}
+		.navbar-collapse {
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+		body:not(.page-home) & .navbar-brand {
+			height: 120px;
 		}
 		.navbar-nav {
 			> li > a {
@@ -177,6 +191,9 @@
 		}
 	}
 	@media (min-width: @screen-lg) {
+		.wrapper {
+			width: 96%;
+		}
 		.navbar-nav {
 			> li > a {
 				font-size: 30px;

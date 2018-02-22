@@ -3,13 +3,72 @@
 // --------------------------------------------------
 
 // Container
-// --------------------------------------------------
+// -------------------------
 .wrapper {
 	.container-fixed();
+
+	@media (min-width: @screen-lg) {
+		width: 96%;
+	}
+}
+
+// Site Content
+// -------------------------
+.site-content {
+	padding-bottom: 15px;
+	padding-top: 10px;
+	position: relative;
+
+	@media (min-width: @screen-sm) {
+		padding-bottom: 30px;
+		padding-top: 15px;
+	}
+	@media (min-width: @screen-sm) {
+		padding-bottom: 60px;
+		padding-top: 30px;
+	}
+	@media (min-width: @screen-sm) {
+		padding-bottom: 100px;
+		padding-top: 50px;
+	}
+}
+
+// Site Banner
+// -------------------------
+.site-banner {
+	background-color: #F2F2F2;
+	color: @text-color;
+	position: relative;
+
+	.breadcrumb {
+		.margin-tb(24px);
+		padding: 0;
+
+		> li > a {
+			color: @text-color;
+
+			&:hover,
+			&:focus {
+				color: @link-color;
+			}
+		}
+	}
+	@media (min-width: @screen-sm) {
+		font-size: 16px;
+	}
+	@media (min-width: @screen-sm) {
+		font-size: 20px;
+	}
+}
+
+// Page Header
+// -------------------------
+.page-header {
+	.margin-tb(10px, 30px);
 }
 
 // Dividers
-// --------------------------------------------------
+// -------------------------
 .divider {
 	display: none;
 	position: absolute;
