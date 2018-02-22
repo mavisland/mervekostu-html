@@ -40,4 +40,11 @@ jQuery(document).ready(function($){
     }
   });
 
+  var homeCarousel = $('#seminarCarousel');
+  homeCarousel.owlCarousel({
+    items: 4,
+    loop: true,
+    autoplay: true,
+  });
+
 });

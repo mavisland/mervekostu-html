@@ -3,7 +3,10 @@
 // --------------------------------------------------
 
 .page-home {
-	padding-top: 0;
+	&,
+	.site-content {
+		padding-top: 0;
+	}
 }
 
 // Hero
@@ -209,5 +212,147 @@
 				font-size: 30px;
 			}
 		}
+	}
+}
+
+.intro {}
+.intro-header {
+	.padding-tb(50px);
+	.text-center();
+}
+.intro-title {
+	color: @text-color;
+	display: inline-block;
+	font-size: 48px;
+	font-weight: bold;
+	margin: 0;
+}
+.intro-box {
+	padding: 40px 26px 20px 40px;
+	.text-center();
+}
+.intro-box-alt {
+	border-left: 1px solid #D0D0D0;
+	padding-left: 26px;
+	padding-right: 40px;
+}
+.intro-caption {
+	display: inline-block;
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	border-left: 5px solid #ED6C09;
+}
+.intro-desc {
+	font-size: 27px;
+}
+.intro-footer {
+	.padding-tb(100px, 30px);
+	.text-center();
+
+	> span {
+		display: block;
+		font-size: 40px;
+		font-weight: bold;
+
+		+ span {
+			margin-top: 20px;
+		}
+		> img {
+			display: inline-block;
+		}
+	}
+}
+
+.course-grid {
+	.margin-tb(40px);
+	position: relative;
+
+	.border {
+		box-shadow: inset 0 0 0 9px #f2f2f2;
+		position: absolute;
+			left: 0;
+			top: 0;
+		.square(100%);
+	}
+	.wrapper {
+		padding: 30px;
+		position: relative;
+	}
+	.row {
+		.margin-lr(0);
+
+		[class*="col-"] {
+			padding: 0;
+		}
+	}
+	.course-bg-image {
+		height: 340px;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		> img {
+			display: block;
+			position: absolute;
+				left: 0;
+				top: 0;
+			// 	left: 50%;
+			// 	top: 50%;
+			// transform: translate(-50%, -50%);
+			.square(100%);
+		}
+	}
+	.course-link {
+		color: #696565;
+		display: block;
+		height: 340px;
+		position: relative;
+		width: 100%;
+
+		&.bg-white {
+			background-color: #fff;
+		}
+		&.bg-gray {
+			background-color: #F1F1F1;
+		}
+		> img,
+		> span {
+			display: block;
+			position: absolute;
+		}
+		> img {
+			right: 10px;
+			top: 10px;
+			.square(200px);
+		}
+		> span {
+			color: inherit;
+			font-size: 33px;
+			font-weight: bold;
+			bottom: 10px;
+			left: 10px;
+		}
+		&:hover,
+		&:focus {
+			color: @link-color;
+		}
+	}
+}
+
+.seminar-carousel {
+	margin-top: 40px;
+
+	.owl-carousel {
+		.owl-item {
+			img {
+				display: inline-block;
+				width: auto;
+			}
+		}
+	}
+	.carousel-item {
+		.padding-lr();
 	}
 }

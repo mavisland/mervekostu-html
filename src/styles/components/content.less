@@ -18,6 +18,7 @@
 	padding-bottom: 15px;
 	padding-top: 10px;
 	position: relative;
+	.clearfix();
 
 	@media (min-width: @screen-sm) {
 		padding-bottom: 30px;
@@ -30,6 +31,11 @@
 	@media (min-width: @screen-sm) {
 		padding-bottom: 100px;
 		padding-top: 50px;
+	}
+
+	> .section {
+		float: left;
+		width: 100%;
 	}
 }
 
