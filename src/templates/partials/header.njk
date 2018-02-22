@@ -1,30 +1,32 @@
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
+	<header class="site-header" id="header">
+		<div class="wrapper">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="sr-only">Menüyü göster</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">{{ site.title }}</a>
+				<a class="navbar-brand" href="#">
+					<img src="assets/images/logo.png" alt="{{ site.title }}">
+					<span class="sr-only">{{ site.title }}</span>
+				</a>
 			</div>
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
+					<li class="active"><a href="#">Eğitimlerimiz</a></li>
+					<li><a href="#">Seminerler</a></li>
+					<li><a href="#">İletişim</a></li>
+					<li><a href="#">Diğer</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-bars"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li><a href="#">Separated link</a></li>
+							<li><a href="#">Eğitimlerimiz</a></li>
+							<li><a href="#">Seminerler</a></li>
+							<li><a href="#">İletişim</a></li>
 						</ul>
 					</li>
 				</ul>
-			</div><!-- /.navbar-collapse -->
+			</div>
 		</div>
-	</nav>
-
+	</header>

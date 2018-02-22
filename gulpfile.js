@@ -100,7 +100,7 @@ gulp.task("clean", function () {
 gulp.task('copy', [
   'copy:icons',
   // 'copy:images',
-  // 'copy:fonts',
+  'copy:fonts',
   'copy:scripts'
 ]);
 
@@ -109,7 +109,7 @@ gulp.task('copy', [
  */
 gulp.task('copy:fonts', function(){
   return gulp.src([
-    'src/components/materialdesignicons/fonts/*.{eot,svg,ttf,woff,woff2}'
+    'src/components/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
   ])
     .pipe(gulp.dest("./public/assets/fonts"))
     .pipe(reload({stream: true}))
@@ -144,7 +144,7 @@ gulp.task('copy:icons', function(){
  */
 gulp.task('copy:images', function(){
   gulp.src([
-    'src/components/jquery.swipebox/img/*.{jpg,gif,png,svg}'
+    'src/components/owl.carousel/images/*.{jpg,gif,png,svg}'
   ])
     .pipe(cache(imageMin({
       progressive: true,
@@ -227,6 +227,7 @@ gulp.task('scripts', function(){
     'src/components/bootstrap/js/scrollspy.js',
     'src/components/bootstrap/js/tab.js',
     'src/components/bootstrap/js/affix.js',
+    'src/components/owl.carousel/js/owl.carousel.min.js',
     'src/scripts/main.js'
   ])
     .pipe(plumber(function(error) {

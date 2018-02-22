@@ -1,3 +1,37 @@
 //
 // Content
 // --------------------------------------------------
+
+// Container
+// --------------------------------------------------
+.wrapper {
+	.container-fixed();
+}
+
+// Dividers
+// --------------------------------------------------
+.divider {
+	display: none;
+	position: absolute;
+		bottom: -99px;
+		left: 0;
+	z-index: 900;
+	.size(100%, 100px);
+
+	&.divider-top {
+		bottom: auto;
+		top: -99px;
+	}
+}
+
+.has-divider {
+	position: relative;
+
+	> .divider {
+		display: block;
+	}
+}
+
+.divider-white > .divider > path {
+	fill: #fff;
+}

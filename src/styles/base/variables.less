@@ -7,12 +7,12 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #000;
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+@gray-base:             #000;
+@gray-darker:           lighten(@gray-base, 13.5%); // #222
+@gray-dark:             lighten(@gray-base, 20%);   // #333
+@gray:                  lighten(@gray-base, 33.5%); // #555
+@gray-light:            lighten(@gray-base, 46.7%); // #777
+@gray-lighter:          lighten(@gray-base, 93.5%); // #eee
 
 @brand-primary:         darken(#428bca, 6.5%); // #337ab7
 @brand-success:         #5cb85c;
@@ -292,7 +292,7 @@
 
 // Small screen / tablet
 //** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  768px;
+@screen-sm:                  769px;
 @screen-sm-min:              @screen-sm;
 //** Deprecated `@screen-tablet` as of v3.0.1
 @screen-tablet:              @screen-sm-min;
@@ -364,22 +364,22 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-color:             #383838;
+@navbar-default-bg:                transparent;
+@navbar-default-border:            transparent;
 
 // Navbar links
-@navbar-default-link-color:                #777;
-@navbar-default-link-hover-color:          #333;
-@navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-color:                #909090;
+@navbar-default-link-hover-color:          #EF8F43;
+@navbar-default-link-hover-bg:             #ED6C09;
+@navbar-default-link-active-color:         @navbar-default-link-hover-color;
+@navbar-default-link-active-bg:            @navbar-default-link-hover-bg;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
-@navbar-default-brand-color:               @navbar-default-link-color;
-@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-color:               #2DAAE1;
+@navbar-default-brand-hover-color:         #909090;
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle

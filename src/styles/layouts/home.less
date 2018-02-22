@@ -1,0 +1,109 @@
+//
+// Layout: Home
+// --------------------------------------------------
+
+// Hero
+// --------------------------------------------------
+.hero {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	position: relative;
+
+	// Hero with background image
+	&.is-bg-img {
+		background-color: #efefef;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+// Hero Header
+.hero-header {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+// Hero Body
+.hero-body {
+	align-items: center;
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+// Hero Footer
+.hero-footer {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+// Hero Title
+.hero-title {
+	color: #2DAAE1;
+	display: inline-block;
+	position: relative;
+
+	&:after {
+		background-color: #fff;
+		content: "";
+		display: block;
+		position: absolute;
+			bottom: -30px;
+			left: 50%;
+		transform: translateX(-50%);
+		.size(280px, 10px);
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: 60px;
+		font-weight: bold;
+	}
+}
+
+// Animated Scroll Icon
+// --------------------------------------------------
+.scroll-icon {
+	border-radius: 44px;
+	border: 2px solid #fff;
+	color: rgba(255, 255, 255, .5);
+	display: inline-block;
+	font-size: 22px;
+	margin-bottom: 20px;
+	transition: .4s;
+	.size(26px, 44px);
+
+	&:after {
+		animation: scroll-icon 2.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+		background-color: #fff;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		margin-left: -1px;
+		.square(4px);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: rgba(255, 255, 255, .05);
+		color: #fff;
+	}
+}
+
+@keyframes scroll-icon {
+	0% {
+		.opacity(0);
+		transform: translateY(-12px);
+	}
+	30%,
+	70% {
+		.opacity(1);
+	}
+	100% {
+		.opacity(0);
+		transform: translateY(12px);
+	}
+}
