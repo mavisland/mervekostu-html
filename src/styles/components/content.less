@@ -44,10 +44,12 @@
 .site-banner {
 	background-color: #F2F2F2;
 	color: @text-color;
+	font-size: 14px;
+	line-height: (20 / 14);
 	position: relative;
 
 	.breadcrumb {
-		.margin-tb(24px);
+		.margin-tb(15px);
 		padding: 0;
 
 		> li > a {
@@ -59,11 +61,13 @@
 			}
 		}
 	}
-	@media (min-width: @screen-sm) {
+	@media (min-width: @screen-md) {
 		font-size: 16px;
-	}
-	@media (min-width: @screen-sm) {
-		font-size: 20px;
+		line-height: (24 / 16);
+
+		.breadcrumb {
+			.margin-tb(13px);
+		}
 	}
 }
 
@@ -92,8 +96,10 @@
 .has-divider {
 	position: relative;
 
-	> .divider {
-		display: block;
+	@media (min-width: @screen-sm) {
+		> .divider {
+			display: block;
+		}
 	}
 }
 

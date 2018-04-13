@@ -1,0 +1,108 @@
+{% set bodyClass = "page-single" %}
+<!-- detay.njk -->
+{% extends "layouts/master.njk" %}
+
+{% block content %}
+	<div class="site-banner">
+		<div class="wrapper">
+			<ol class="breadcrumb">
+				<li><a href="#">anasayfa</a></li>
+				<li><a href="#">seminerler</a></li>
+				<li class="active">liderlik ve motivasyon</li>
+			</ol>
+		</div>
+	</div>
+	<div class="site-content">
+		<section class="section seminar-single">
+			<div class="wrapper">
+				<div class="row seminar-content">
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<div class="single-object">
+							<img src="assets/images/icerik/detay.jpg" alt="liderlik ve motivasyon" class="img-responsive">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6">
+						<div class="single-content">
+							<div class="content-title text-center">
+								<h1>liderlik ve motivasyon</h1>
+							</div>
+							<div class="content-row">
+								<h2>Eğitim Süresi</h2>
+								<p><strong>6 Saat</strong></p>
+								<h2>Eğitim Düzeyi</h2>
+								<ul class="list-inline">
+									<li><i class="fa fa-check-circle-o"></i> Temel</li>
+									<li class="active"><i class="fa fa-check-circle-o"></i> Orta</li>
+									<li><i class="fa fa-check-circle-o"></i> İleri</li>
+								</ul>
+								<h2>Kimler Katılmalı</h2>
+								<p>Yöneticiler,firma sahipleri,yönetici adayları</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row tabs">
+					<div class="col-xs-12">
+						<ul class="tab-nav">
+							<li class="active"><a href="#amaclar" data-toggle="tab">Amaçları</a></li>
+							<li><a href="#icerik" data-toggle="tab">Eğitim İçeriği</a></li>
+							<li><a href="#gereksinim" data-toggle="tab">Ön Gereksinimler</a></li>
+							<li><a href="#basvuru" data-toggle="modal">Başvuru</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="amaclar">
+								<p>Yöneticiler, firma sahipleri, yönetici adayları</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="tab-pane fade" id="icerik">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="tab-pane fade" id="gereksinim">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}
+{% block foot %}
+	<div class="modal modal-center fade" id="basvuru">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Kayıt Ol</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="adsoyad">Adınız - Soyadınız</label>
+							<input type="text" class="form-control" name="adsoyad" id="adsoyad">
+						</div>
+						<div class="form-group">
+							<label for="eposta">E-Posta adresiniz</label>
+							<input type="email" class="form-control" name="eposta" id="eposta">
+						</div>
+						<div class="form-group">
+							<label for="telefon">Telefon Numaranız</label>
+							<input type="text" class="form-control" name="telefon" id="telefon">
+						</div>
+						<div class="form-group">
+							<label for="katilimci">Katılımcı Sayısı</label>
+							<input type="text" class="form-control" name="katilimci" id="katilimci">
+						</div>
+						<div class="form-group">
+							<label for="notlar">İletmek istedikleriniz</label>
+							<textarea name="notlar" id="notlar" rows="5" class="form-control"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-block btn-submit">Kayıt Ol</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -22,7 +22,7 @@
 	> a {
 		color: #8f8f8f;
 		color: rgba(144, 144, 144, .7);
-		display: block;
+		display: inline-block;
 
 		&:hover,
 		&:focus {
@@ -30,9 +30,11 @@
 		}
 	}
 	@media (min-width: @screen-sm) {
-		font-size: 20px;
 		line-height: 1;
 		.text-right();
+	}
+	@media (min-width: @screen-md) {
+		font-size: 16px;
 	}
 }
 
@@ -64,19 +66,18 @@
 		}
 	}
 	@media (min-width: @screen-sm) {
-		.text-right();
-
 		> li {
 			.padding-lr();
+		}
+	}
+	@media (min-width: @screen-md) {
+		> li > a {
+			font-size: 16px;
+			line-height: (24 / 16);
 
-			> a {
-				font-size: 30px;
-				line-height: (48 / 30);
-
-				&:before {
-					display: inline-block;
-					margin-right: 10px;
-				}
+			&:before {
+				display: inline-block;
+				margin-right: 10px;
 			}
 		}
 	}

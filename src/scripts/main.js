@@ -44,7 +44,18 @@ jQuery(document).ready(function($){
   homeCarousel.owlCarousel({
     items: 4,
     loop: true,
-    autoplay: true,
+    // autoplay: true,
+    responsive : {
+      0 : {
+        items: 1,
+      },
+      768 : {
+        items: 2,
+      },
+      992 : {
+        items: 4,
+      }
+    }
   });
 
 });

@@ -15,7 +15,10 @@ html {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	padding-top: 120px;
+
+	@media (min-width: @screen-md) {
+		padding-top: 120px;
+	}
 }
 
 // Links

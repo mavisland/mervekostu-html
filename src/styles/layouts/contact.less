@@ -11,9 +11,9 @@
 	}
 	.form-title {
 		color: #909090;
-		font-size: 25px;
+		font-size: 20px;
 		font-weight: normal;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		margin-top: 0;
 	}
 	.form-control {
@@ -25,12 +25,12 @@
 	}
 	.help-block {
 		color: @text-color;
-		font-size: 20px;
+		font-size: 16px;
 	}
 	.btn-submit {
 		background-color: #fff;
 		color: @link-color;
-		font-size: 24px;
+		font-size: 16px;
 
 		.fa {
 			color: #CBC9C8;
@@ -41,12 +41,28 @@
 			color: #fff;
 		}
 	}
+	@media (max-width: (@screen-xs - 1)) {
+		.form-title {
+			.text-center();
+		}
+	}
+	@media (min-width: @screen-md) {
+		.form-title {
+			font-size: 25px;
+			margin-bottom: 30px;
+		}
+		.help-block {
+			font-size: 20px;
+		}
+		.btn-submit {
+			font-size: 24px;
+		}
+	}
 }
 
 .contact-info {
 	background-color: #F2F2F2;
-	margin-left: -26px;
-	margin-top: 57px;
+	margin-top: 20px;
 
 	ul {
 		list-style: none;
@@ -59,28 +75,20 @@
 			> a,
 			> span {
 				display: block;
-				padding: 30px;
+				padding: 15px;
 			}
 			> a {
 				border-bottom: 3px solid #fff;
 				color: #969696;
-				font-size: 20px;
 				line-height: (24 / 20);
 				position: relative;
-				padding-left: 60px;
 
 				> .fa {
 					color: #B7B4B2;
 					display: block;
-					font-size: 24px;
+					font-size: 20px;
 					line-height: 1;
-					.opacity(.7);
-					position: absolute;
-						left: 18px;
-						top: 50%;
-					.text-center();
-					transform: translateY(-50%);
-					.square(24px);
+					.size(100%, 24px);
 				}
 				> span {
 					color: inherit;
@@ -94,6 +102,48 @@
 				&:focus {
 					border-color: @link-color;
 					color: #716F6F;
+				}
+			}
+		}
+	}
+	@media (max-width: (@screen-xs - 1)) {
+		ul {
+			> li {
+				> a {
+					.text-center();
+
+					> .fa {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: @screen-md) {
+		margin-left: -26px;
+		margin-top: 57px;
+	}
+	@media (min-width: @screen-sm) {
+		ul {
+			li {
+				> a,
+				> span {
+					padding: 30px;
+				}
+				> a {
+					font-size: 20px;
+					padding-left: 60px;
+
+					> .fa {
+						font-size: 24px;
+						.opacity(.7);
+						position: absolute;
+							left: 18px;
+							top: 50%;
+						.text-center();
+						transform: translateY(-50%);
+						.square(24px);
+					}
 				}
 			}
 		}

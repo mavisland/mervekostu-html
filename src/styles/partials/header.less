@@ -3,12 +3,7 @@
 // --------------------------------------------------
 
 .site-header {
-	position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-	transition: all .3s ease-in-out;
-	z-index: @zindex-navbar-fixed;
+	position: relative;
 
 	body:not(.page-home) & {
 		background-color: #fff;
@@ -17,7 +12,7 @@
 	// Navbar Brand
 	.navbar-brand {
 		color: @navbar-default-brand-color;
-		.padding-tb();
+		.padding-tb(5px);
 
 		&,
 		> img {
@@ -37,7 +32,10 @@
 
 	// Toggle Button
 	.navbar-toggle {
-		border-color: @navbar-default-toggle-border-color;
+		border: 0;
+		padding: 5px 10px;
+		.text-center();
+		.size(unit(floor( (70 / 1.61803398875) ), px), 70px);
 
 		&:hover,
 		&:focus {
@@ -94,15 +92,25 @@
 	// Shrink Header
 	&.shrink {
 		background-color: #fff;
-		.box-shadow(0 2px 3px rgba(10, 10, 10, 0.1));
-
-		.navbar-brand {
-			height: 120px;
-		}
+		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
 	}
 
 	// Responsive Styles
-	@media (max-width: @grid-float-breakpoint-max) {
+	@media (max-width: @screen-sm-max) {
+		background-color: #fff;
+
+		.wrapper {
+			.padding-lr(0);
+		}
+		.navbar-brand {
+			height: 70px;
+			position: relative;
+				left: 50%;
+			transform: translateX(-50%);
+		}
+		.navbar-collapse {
+			box-shadow: inset 0 5px 3px -3px rgba(10,10,10,.1);
+		}
 		.navbar-nav {
 			.open .dropdown-menu {
 				> li > a {
@@ -125,7 +133,14 @@
 			}
 		}
 	}
-	@media (min-width: @screen-sm) {
+	@media (min-width: @screen-md) {
+		position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+		transition: all .3s ease-in-out;
+		z-index: @zindex-navbar-fixed;
+
 		.wrapper,
 		.navbar-header,
 		.navbar-collapse {
@@ -138,12 +153,13 @@
 		.navbar-header {
 			flex-shrink: 0;
 		}
+		.navbar-brand {
+			height: 100px;
+			.padding-tb(10px);
+		}
 		.navbar-collapse {
 			flex-grow: 1;
 			flex-shrink: 0;
-		}
-		body:not(.page-home) & .navbar-brand {
-			height: 120px;
 		}
 		.navbar-nav {
 			> li > a {
@@ -183,20 +199,16 @@
 			}
 		}
 	}
-	@media (min-width: @screen-md) {
-		.navbar-nav {
-			> li > a {
-				font-size: 24px;
-			}
-		}
-	}
 	@media (min-width: @screen-lg) {
 		.wrapper {
 			width: 96%;
 		}
+		.navbar-brand {
+			height: 110px;
+		}
 		.navbar-nav {
 			> li > a {
-				font-size: 30px;
+				font-size: 20px;
 			}
 		}
 	}

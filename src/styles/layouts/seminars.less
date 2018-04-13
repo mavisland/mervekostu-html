@@ -5,14 +5,12 @@
 .seminar-grid {
 	// Title row
 	.seminar-title-row {
-		box-shadow: inset 9px 0 0 #f2f2f2;
 		.margin-lr(0);
 		.text-center();
 
 		h1 {
 			display: block;
-			font-size: 30px;
-			font-weight: bold;
+			font-size: 24px;
 			margin: 0;
 			position: relative;
 			.text-lowercase();
@@ -20,7 +18,7 @@
 			&:before {
 				background-color: #f2f2f2;
 				content: "";
-				display: block;
+				display: none;
 				height: 9px;
 				position: absolute;
 					left: -10px;
@@ -31,9 +29,6 @@
 			> span {
 				background-color: #fff;
 				color: #909090;
-				.padding-lr();
-				position: relative;
-					top: -14px;
 
 				&:after {
 					background-color: #ED6C09;
@@ -44,48 +39,33 @@
 						bottom: -6px;
 						left: 10px;
 						right: 10px;
-					// .size(100%, 6px);
 				}
 			}
 		}
 	}
 
+	// Card Row
 	.seminar-row {
-		border-bottom: 9px solid #f2f2f2;
 		.margin-lr(0);
-		padding: 40px 30px;
-
-		&:nth-of-type(odd) {
-			box-shadow: inset -9px 0 0 #f2f2f2;
-		}
-		&:nth-of-type(even) {
-			box-shadow: inset 9px 0 0 #f2f2f2;
-		}
 	}
 
 	// Card wrapper
 	.seminar-card {
-		align-items: stretch;
 		background-color: #f2f2f2;
 		color: #909090;
 		display: flex;
+		align-items: stretch;
 		flex-direction: column;
-		font-size: 20px;
-		font-weight: bold;
 		justify-content: center;
-		margin-bottom: 30px;
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 20px;
 		.text-center();
 
 		&:hover,
 		&:focus {
-			// background-color: #fcfcfc;
 			background-color: #ececec;
-			// box-shadow: 0 2px 6px rgba(59,59,59,.15);
 			box-shadow: inset 0 0 0 3px @link-color;
-
-			// .seminar-icon {
-			// 	.scale(1.1);
-			// }
 		}
 	}
 
@@ -93,7 +73,7 @@
 	.seminar-header {
 		flex-grow: 0;
 		flex-shrink: 0;
-		padding-top: 30px;
+		padding-top: 20px;
 	}
 
 	// Card Body
@@ -101,14 +81,14 @@
 		flex-grow: 1;
 		flex-shrink: 0;
 		justify-content: center;
-		padding-bottom: 100px;
-		padding-top: 100px;
+		padding-bottom: 30px;
+		padding-top: 30px;
 	}
 
 	// Card Title
 	.seminar-title {
 		display: inline-block;
-		font-size: 25px;
+		font-size: 20px;
 		position: relative;
 
 		&:after {
@@ -119,20 +99,208 @@
 				bottom: -10px;
 				left: 50%;
 			transform: translateX(-50%);
-			.size(122px, 6px);
+			.size(122px, 3px);
 		}
 	}
 
 	// Card Icon
 	.seminar-icon {
 		.img-responsive(inline-block);
-		// transition: all 200ms ease-in-out;
 	}
 
 	// Card Footer
 	.seminar-footer {
 		flex-grow: 0;
 		flex-shrink: 0;
-		padding-bottom: 30px;
+		padding-bottom: 20px;
+	}
+
+	// Responsive Styles
+	@media (max-width: (@screen-xs - 1)) {
+		.seminar-title-row {
+			margin-bottom: 20px;
+
+			h1 > span:after {
+				height: 3px;
+				left: 50%;
+				right: auto;
+				transform: translateX(-50%);
+				width: 50%;
+			}
+		}
+	}
+	@media (min-width: @screen-sm) {
+		.seminar-title-row {
+			box-shadow: inset 9px 0 0 #f2f2f2;
+
+			h1 {
+				font-size: 30px;
+
+				&:before {
+					display: block;
+				}
+				> span {
+					background-color: #fff;
+					color: #909090;
+					.padding-lr();
+					position: relative;
+						top: -14px;
+
+					&:after {
+						background-color: #ED6C09;
+						content: "";
+						display: block;
+						height: 6px;
+						position: absolute;
+							bottom: -6px;
+							left: 10px;
+							right: 10px;
+					}
+				}
+			}
+		}
+		.seminar-row {
+			border-bottom: 9px solid #f2f2f2;
+			padding: 40px 30px;
+
+			&:nth-of-type(odd) {
+				box-shadow: inset -9px 0 0 #f2f2f2;
+			}
+			&:nth-of-type(even) {
+				box-shadow: inset 9px 0 0 #f2f2f2;
+			}
+		}
+		.seminar-card {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+		.seminar-header {
+			padding-top: 30px;
+		}
+		.seminar-title {
+			font-size: 25px;
+
+			&:after {
+				height: 6px;
+			}
+		}
+		.seminar-body {
+			padding-bottom: 100px;
+			padding-top: 100px;
+		}
+		.seminar-footer {
+			padding-bottom: 30px;
+		}
+	}
+}
+
+.seminar-single {
+	.seminar-content,
+	.single-object {
+		margin-bottom: 30px;
+	}
+	.single-content {
+		border-bottom: 3px solid #F2F2F2;
+	}
+	.content-title {
+		h1 {
+			font-size: 24px;
+			font-weight: normal;
+			margin-bottom: 20px;
+			margin-top: 0;
+		}
+	}
+	.content-row {
+		color: #787878;
+
+		h2 {
+			color: #969696;
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 1.2;
+			margin-bottom: 15px;
+			margin-top: 0;
+		}
+		.list-inline {
+			> li {
+				.fa {
+					display: none;
+				}
+			}
+			> .active {
+				color: #ED6C09;
+
+				.fa {
+					display: inline-block;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	// .tabs {}
+	.tab-nav {
+		list-style: none;
+		padding-left: 0;
+
+		> li {
+			display: inline-block;
+		}
+		> li + li:before {
+			color: #787878;
+			content: "/\00a0";
+			padding: 0 5px;
+		}
+		> li > a {
+			color: #787878;
+			display: inline-block;
+			font-size: 15px;
+			font-weight: normal;
+			line-height: 1.6;
+			.padding-tb(6px);
+			.text-uppercase();
+
+			&:hover,
+			&:focus {
+				box-shadow: inset 0 -3px 0 #3CB0E3;
+				color: #787878;
+			}
+		}
+		> .active > a {
+			&,
+			&:hover,
+			&:focus {
+				box-shadow: inset 0 -3px 0 #3CB0E3;
+				color: #787878;
+			}
+		}
+	}
+	@media (min-width: @screen-sm) {
+		.seminar-content {
+			display: flex;
+		}
+		.single-content {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			height: 100%;
+		}
+		.content-title,
+		.content-row {
+			width: 100%;
+		}
+		.content-title {
+			height: 20%;
+
+			h1 {
+				font-size: 34px;
+			}
+		}
+		.content-row {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			height: 80%;
+		}
 	}
 }
