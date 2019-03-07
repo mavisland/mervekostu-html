@@ -1,17 +1,17 @@
 #mervekostu-html Project
 ---
 
-PSD 2 HTML conversion for **Merve Kostu HTML Web Site**.
+PSD 2 HTML conversion for **Merve Kostu Web Site**.
 
-[Click here](http://demo.weblebix.com/mervekostu-html) to see the demo.
+[Click here](https://mervekostu.surge.sh/) to see the demo.
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? [Open a new issue](https://gitlab.com/mavisland/mervekostu-html/issues/new) here on GitHub.
+Have a bug or a feature request? [Open a new issue](https://github.com/mavisland/mervekostu-html/issues/new) here on GitHub.
 
 ## Copyright & License
 
-Copyright © 2018 Tanju Yıldız. Code released under the [MIT](https://gitlab.com/mavisland/mervekostu-html/blob/master/LICENSE.md) license.
+Copyright © 2018 Tanju Yıldız. Code released under the [MIT](https://github.com/mavisland/mervekostu-html/blob/master/LICENSE.md) license.
 
 ## Hire me?
 
